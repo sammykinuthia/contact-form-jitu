@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Mng Sys</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="profile"></div>
+            <div class="actions">
+                <p id="all-contacts" class="">All contacts</p>
+                <p id="add-contact" class="">Add Contacts</p>
+                <p id="favorites" class="">Favorites</p>
+            </div>
+        </aside>
+        <main id="main-section">
+            <div id="contact-section">
+                <h4 id="contact-total text-muted">20 contacts</h4>
+                <h2 class="title">Contacts</h2>
+                <div id="contact-filter-section">
+                    <select name="filter" id="filter">
+                        <option value="">Filter by</option>
+                        <option value="name">Name</option>
+                        <option value="name">Date created</option>
+                    </select>
+                    <select name="order" id="order">
+                        <option value="asc">A-Z</option>
+                        <option value="desc">Z-A</option>
+                    </select>
+                </div>
+                <div class="contacts-list">
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <template id="contact-section-template">
+        <div id="contact-section">
+            <h4 id="contact-total text-muted">20 contacts</h4>
+            <h2 class="title">Contacts</h2>
+            <div id="contact-filter-section">
+                <select name="filter" id="filter">
+                    <option value="">Filter by</option>
+                    <option value="name">Name</option>
+                    <option value="name">Date created</option>
+                </select>
+                <select name="order" id="order">
+                    <option value="asc">A-Z</option>
+                    <option value="desc">Z-A</option>
+                </select>
+            </div>
+            <div class="contacts-list">
+            </div>
+        </div>
+    </template>
+    <template id="user-template">
+        <div class="contact">
+            <div class="user-profile">
+                <img class="img" src="https://img.freepik.com/free-photo/businesswoman-executive-professional-success-concept_53876-137644.jpg?w=996&t=st=1689923069~exp=1689923669~hmac=dae418a6a234942b4a51a908dcdaf7990c8ba7ce67437117966b9e98a9cfbdea"
+                    alt="">
+            </div>
+            <div class="user-desc">
+                <div>
+                    <h3 class="subtitle user-name">Samuel Mwaniki</h3>
+                    <p class="text-muted user-contact">0790360980</p>
+                </div>
+                <div>
+                    <p class="text-muted job-desc">Web Dev</p>
+                    <div class="text-muted user-email">samuel@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="add-contact-template">
+        <div>
+            <form id="form-contact" action="" method="post">
+                <label>
+                    <input placeholder="John" id="input-first-name" type="text">
+                </label>
+                <label>
+                    <input placeholder="Dow" id="input-last-name" type="text">
+                </label>
+                <label>
+                    <input placeholder="Dow" id="input-user-email" type="email">
+                </label>
+                <label>
+                    <input placeholder="Mr" id="input-user-title" type="text">
+                </label>
+                <label>
+                    <input placeholder="0700 000 000" id="input-user-phone" type="text">
+                </label>
+                <label>
+                    <input placeholder="web dev" id="input-user-job-title" type="text">
+                </label>
+                <label>
+                    <input placeholder="http://" id="input-user-img" type="text">
+                </label>
+                <div id="btn-section">
+                    <button type="submit">Save contact</button>
+                </div>
+            </form>
+        </div>
+
+    </template>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
